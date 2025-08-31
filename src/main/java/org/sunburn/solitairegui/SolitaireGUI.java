@@ -38,21 +38,25 @@ public class SolitaireGUI {
 
     }
 
+    // regresa raiz para que las demas clases puedan acceder a este
     public AnchorPane getRoot()
     {
         return root;
     }
 
+    // da a SolitaireGame para que controller pueda acceder a el y hacer cosas
     public  SolitaireGame getSolitaireGame()
     {
         return sg;
     }
 
+    // voltea las cartas
     public ImageView getCardBack()
     {
         return cardBack;
     }
 
+    // llama a actualizar WastePileGUI y limpia lo que habia antes
     public void actualizeWastePile()
     {
         wastePile.actualizeView(root);
@@ -68,6 +72,7 @@ public class SolitaireGUI {
         }
     }
 
+    // llama a actualizar la fundacion
     public void actualizeFundationPile()
     {
         fundationPile.actualizeView(root);
@@ -78,6 +83,8 @@ public class SolitaireGUI {
         tableu.actualizeView(root);
     }
 
+    // revisa si el juego termino de SOlitaireGame, si es asi muestra la pantalla de ganar
+    // pero no cierra la ventana para que puedas presumir si quieres :P
     public void checkGameEnd()
     {
         if(sg.isGameOver())

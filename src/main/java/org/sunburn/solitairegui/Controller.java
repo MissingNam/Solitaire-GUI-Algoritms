@@ -32,9 +32,11 @@ public class Controller {
     @FXML
     Button Discard;
 
+        // recibir el solitaireGUi para trabajar con el
     public void setSolg(SolitaireGUI solg) {
         this.solg = solg; }
 
+    // llama a sacar cartas de SolitaireGame y actualiza la WastePileGUI
     public void sacarCartas()
     {
         solg.getSolitaireGame().drawCards();
@@ -45,6 +47,8 @@ public class Controller {
         solg.actualizeWastePile();
     }
 
+    // revisa que boton fue presionado y cuantos han sido
+    // si ya presionaste 2 botones, segun cuales fueron, revisa que debe hacer
     @FXML
     public void buttonPressed(ActionEvent event)
     {
@@ -117,6 +121,7 @@ public class Controller {
 
     }
 
+    // boton de recargar, recarga la pila y limpia lo grafico de WastePileGUI
     public void reloadButton()
     {
         solg.getSolitaireGame().getDrawPile().recargar(solg.getSolitaireGame().getWastePile().emptyPile());

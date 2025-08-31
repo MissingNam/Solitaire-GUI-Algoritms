@@ -31,6 +31,7 @@ public class GraficCard extends ImageView {
             case "♠\uFE0F" -> {fila = 4;}
         }
 
+        // esto es la ubicacion del archivo
         String ubicacion = "fila-"+fila+"-columna-"+columna+".png";
         imagen = new Image((getClass().getResource("Cartas/"+ubicacion).toExternalForm()));
 
@@ -42,6 +43,7 @@ public class GraficCard extends ImageView {
 
     }
 
+    // Nunca fue usado, pero revisaba si invertiste la carta
     public void actualizeView(){
         if(!origen.isFaceup())
         {

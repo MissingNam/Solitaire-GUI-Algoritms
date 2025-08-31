@@ -18,6 +18,7 @@ public class TableuGUI {
         this.tableu = tableu;
     }
 
+    // coloca las cartas, de izquierda a derecha, de arriba a abajo
     public void actualizeView(AnchorPane root)
     {
         clear(sgui.getRoot());
@@ -43,6 +44,7 @@ public class TableuGUI {
 
     }
 
+    // crea un cuadrado para limpiar lo que habia antes.
     public void clear(AnchorPane root){
         Rectangle rectangle = new Rectangle();
         rectangle.setHeight(1000);

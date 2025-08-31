@@ -16,6 +16,7 @@ public class wastePileGUI {
         this.pila = pila;
     }
 
+    // muestra la carta mas arriba de la wastePile logica utilizando una cartaGrafica
     public void actualizeView(AnchorPane root)
     {
         CartaInglesa carta = pila.verCarta();

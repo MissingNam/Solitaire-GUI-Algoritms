@@ -33,9 +33,6 @@ public class GUIStarter extends Application {
 
         controller.setSolg(solg);
 
-
-
-
         stage.show();
     }
 
