@@ -3,6 +3,9 @@ package org.sunburn.solitairegui;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Controller {
 
@@ -124,9 +127,19 @@ public class Controller {
     // boton de recargar, recarga la pila y limpia lo grafico de WastePileGUI
     public void reloadButton()
     {
-        solg.getSolitaireGame().getDrawPile().recargar(solg.getSolitaireGame().getWastePile().emptyPile());
-        solg.actualizeWastePile();
-        solg.getCardBack().setVisible(true);
+        if(!solg.getSolitaireGame().getDrawPile().hayCartas()) {
+            solg.getSolitaireGame().getDrawPile().recargar(solg.getSolitaireGame().getWastePile().emptyPile());
+            solg.actualizeWastePile();
+            solg.getCardBack().setVisible(true);
+        }
+    }
 
+    public void newGame()
+    {
+        try {
+            new GUIStarter().start(new Stage());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

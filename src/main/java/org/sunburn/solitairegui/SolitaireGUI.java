@@ -9,6 +9,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import org.sunburn.solitairegui.solitaire.SolitaireGame;
 
+import javax.sound.sampled.*;
+import java.io.File;
+import java.io.IOException;
+
 
 public class SolitaireGUI {
 
@@ -33,6 +37,8 @@ public class SolitaireGUI {
         wastePile = new wastePileGUI(sg.getWastePile());
         fundationPile = new FundationPileGUI(sg.getFoundation());
         tableu = new TableuGUI(sg.getTableau(), this);
+
+
 
         actualizeTableu();
 
@@ -97,5 +103,24 @@ public class SolitaireGUI {
             alert.showAndWait();
         }
     }
+
+    public void playAudio()
+    {
+        try {
+            File archivoAudio = new File("/src/main/resources/tema.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(archivoAudio);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
+
 
 }

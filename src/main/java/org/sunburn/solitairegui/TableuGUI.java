@@ -33,7 +33,7 @@ public class TableuGUI {
                 GraficCard ct = new GraficCard(cartas.get(j));
 
                 ct.setX((85*i));
-                ct.setY(180+(64*j));
+                ct.setY(180+(32*j));
                 ct.setScaleX(0.75);
                 ct.setScaleY(0.75);
 

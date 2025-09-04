@@ -20,13 +20,14 @@ public class FundationPileGUI {
 
     public void actualizeView(AnchorPane root)
     {
+
         // Obtener las Cartas
         CartaInglesa base = fundacion.get(0).getUltimaCarta();
         if(base != null)
         {
             carta1 = new GraficCard(base);
 
-            carta1.setX(10);
+            carta1.setX(0);
             carta1.setY(45);
             carta1.setScaleX(0.75);
             carta1.setScaleY(0.75);
@@ -39,7 +40,7 @@ public class FundationPileGUI {
         {
             carta2 = new GraficCard(base);
 
-            carta2.setX(70);
+            carta2.setX(85);
             carta2.setY(45);
             carta2.setScaleX(0.75);
             carta2.setScaleY(0.75);
@@ -52,7 +53,7 @@ public class FundationPileGUI {
         {
             carta3 = new GraficCard(base);
 
-            carta3.setX(140);
+            carta3.setX(170);
             carta3.setY(45);
             carta3.setScaleX(0.75);
             carta3.setScaleY(0.75);
@@ -65,7 +66,7 @@ public class FundationPileGUI {
         {
             carta4 = new GraficCard(base);
 
-            carta4.setX(220);
+            carta4.setX(255);
             carta4.setY(45);
             carta4.setScaleX(0.75);
             carta4.setScaleY(0.75);
